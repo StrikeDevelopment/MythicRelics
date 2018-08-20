@@ -20,7 +20,7 @@ class Rare implements Listener
 {
     private $plugin;
 
-    public function __construct(Loader $plugin)
+    public function __construct(EventLoader $plugin)
     {
         $this->setPlugin($plugin);
         $plugin->getServer()->getPluginManager()->registerEvents($this, $plugin);
