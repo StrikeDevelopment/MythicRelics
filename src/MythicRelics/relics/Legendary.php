@@ -42,9 +42,17 @@ class Legendary implements Listener
             if($chance === 1){
 
                 $relic = Item::get(54, 103, 1);
-                $relic->setCustomName(TF::RESET . TF::GREEN . "Legendary" . TF::GRAY . " relic");
+                $relic->setCustomName(TF::RESET . TF::GREEN . "§6[§bAncient Artifact§6]§r" . PHP_EOL .
+                                      TF::GRAY . "§4--------------------§r" . PHP_EOL .
+                                      TF::GRAY . "§7This Ancient Pouch" . PHP_EOL .
+                                      TF::GRAY . "§7contains §l§bMythical§r" . PHP_EOL .
+                                      TF::GRAY . "§l§bRewards§r" . PHP_EOL .
+                                      TF::GRAY . "§4--------------------§r" . PHP_EOL .
+                                      TF::GRAY . "§dTier Level: §6II" . PHP_EOL .
+                                      TF::GRAY . "§dActivation: §6Right-Click" . PHP_EOL .
+                                      TF::GRAY . "§4--------------------§r" . PHP_EOL .
                 $player->getInventory()->addItem($relic);
-                $player->getServer()->broadcastMessage(TF::BOLD . TF::DARK_GRAY . "(" . TF::DARK_PURPLE . "!" . TF::DARK_GRAY . ")" . TF::RESET . TF::GRAY . TF::RESET . TF::GRAY . " $name Found a Legendary Relic!");
+                $player->getServer()->broadcastMessage(TF::BOLD . TF::DARK_GRAY . "§7(" . TF::DARK_PURPLE . "§l§c!§r" . TF::DARK_GRAY . "§7)" . TF::RESET . TF::GRAY . TF::RESET . TF::GRAY . "§a $name §7found a §bAncient Artifact §l§6II§r");
             }
         }
     }
@@ -110,7 +118,7 @@ class Legendary implements Listener
             $rand1 = mt_rand(0, 1);
 
             $player->getInventory()->addItem($tobegiven1[$rand1]);
-            $player->sendMessage(TF::LIGHT_PURPLE . "Opening Relic..");
+            $player->sendMessage(TF::LIGHT_PURPLE . "§7Opening §bAncient Artifact §l§6II§r");
             $player->getInventory()->removeItem($relic);
             break;
         }
