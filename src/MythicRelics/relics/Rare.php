@@ -42,9 +42,17 @@ class Rare implements Listener
             if($chance === 1){
 
                 $relic = Item::get(54, 102, 1);
-                $relic->setCustomName(TF::RESET . TF::RED . "Rare" . TF::GRAY . " relic");
+                $relic->setCustomName(TF::RESET . TF::RED . "§6[§bAncient Artifact§6]" . PHP_EOL .
+                                      TF::GRAY . "§4--------------------§r" . PHP_EOL .
+                                      TF::GRAY . "§7This Ancient Pouch" . PHP_EOL .
+                                      TF::GRAY . "§7contains §l§bMythical" . PHP_EOL .
+                                      TF::GRAY . "§l§bRewards§r" . PHP_EOL .
+                                      TF::GRAY . "§4--------------------§r" . PHP_EOL .
+                                      TF::GRAY . "§dTier Level: §6IV" . PHP_EOL .
+                                      TF::GRAY . "§dActivation: §6Right-Click§r" . PHP_EOL .
+                                      TF::GRAY . "§4--------------------§r");
                 $player->getInventory()->addItem($relic);
-                $player->getServer()->broadcastMessage(TF::BOLD . TF::DARK_GRAY . "(" . TF::DARK_PURPLE . "!" . TF::DARK_GRAY . ")" . TF::RESET . TF::GRAY . TF::RESET . TF::GRAY . " $name Found a Rare Relic!");
+                $player->getServer()->broadcastMessage(TF::BOLD . TF::DARK_GRAY . "§7(" . TF::DARK_PURPLE . "§l§c!§r" . TF::DARK_GRAY . "§7)" . TF::RESET . TF::GRAY . TF::RESET . TF::GRAY . "§a $name §7found a §bAncient Artifact §l§6IV§r");
             }
         }
     }
@@ -68,38 +76,38 @@ class Rare implements Listener
             case "102":
             $relic = Item::get(54, 102, 1);
             $item1 = Item::get(310, 0, 1);
-            $item1->setCustomName(TF::RED . "Rare" . TF::GRAY . "Helmet");
-            $item1->addEnchantment(new EnchantmentInstance($prot, 2));
+            $item1->setCustomName(TF::RED . "§cSoul" . TF::GRAY . "Helmet");
+            $item1->addEnchantment(new EnchantmentInstance($prot, 50));
             $item1->addEnchantment(new EnchantmentInstance($unb, 2));
 
             $item2 = Item::get(311, 0, 1);
-            $item2->setCustomName(TF::RED . "Rare" . TF::GRAY . "Chestplate");
-            $item2->addEnchantment(new EnchantmentInstance($prot, 2));
+            $item2->setCustomName(TF::RED . "§cSoul" . TF::GRAY . "Chestplate");
+            $item2->addEnchantment(new EnchantmentInstance($prot, 50));
             $item2->addEnchantment(new EnchantmentInstance($unb, 2));
             
             $item3 = Item::get(312, 0, 1);
-            $item3->setCustomName(TF::RED . "Rare" . TF::GRAY . "Leggings");
-            $item3->addEnchantment(new EnchantmentInstance($prot, 2));
+            $item3->setCustomName(TF::RED . "§cSoul" . TF::GRAY . "Leggings");
+            $item3->addEnchantment(new EnchantmentInstance($prot, 50));
             $item3->addEnchantment(new EnchantmentInstance($unb, 2));
 
             $item4 = Item::get(313, 0, 1);
-            $item4->setCustomName(TF::RED . "Rare" . TF::GRAY . "Boots");
-            $item4->addEnchantment(new EnchantmentInstance($prot, 2));
+            $item4->setCustomName(TF::RED . "§cSoul" . TF::GRAY . "Boots");
+            $item4->addEnchantment(new EnchantmentInstance($prot, 50));
             $item4->addEnchantment(new EnchantmentInstance($unb, 2));
 
             $sword = Item::get(276, 0, 1);
-            $sword->setCustomName(TF::RED . "Rare" . TF::GRAY . "Sword");
-            $sword->addEnchantment(new EnchantmentInstance($sharp, 2));
+            $sword->setCustomName(TF::RED . "§2Zeldas" . TF::GRAY . "§aBlade§r");
+            $sword->addEnchantment(new EnchantmentInstance($sharp, 30));
             $sword->addEnchantment(new EnchantmentInstance($unb, 2));
 
             $pickaxe = Item::get(278, 0, 1);
-            $pickaxe->setCustomName(TF::RED . "Rare" . TF::GRAY . "Pickaxe");
-            $pickaxe->addEnchantment(new EnchantmentInstance($eff, 2));
+            $pickaxe->setCustomName(TF::RED . "§bInfinite" . TF::GRAY . "§3Mining §bSource");
+            $pickaxe->addEnchantment(new EnchantmentInstance($eff, 20));
             $pickaxe->addEnchantment(new EnchantmentInstance($unb, 2));
 
             $axe = Item::get(279, 0, 1);
-            $axe->setCustomName(TF::RED . "Rare" . TF::GRAY . "Axe");
-            $axe->addEnchantment(new EnchantmentInstance($eff, 2));
+            $axe->setCustomName(TF::RED . "§l§dLUCKY§r" . TF::GRAY . "§3Axe");
+            $axe->addEnchantment(new EnchantmentInstance($eff, 20));
             $axe->addEnchantment(new EnchantmentInstance($unb, 2));
 
             $diamond = Item::get(264, 0, 8);
@@ -110,7 +118,7 @@ class Rare implements Listener
             $rand1 = mt_rand(0, 1);
 
             $player->getInventory()->addItem($tobegiven1[$rand1]);
-            $player->sendMessage(TF::LIGHT_PURPLE . "Opening Relic..");
+            $player->sendMessage(TF::LIGHT_PURPLE . "§7Opening §bAncient Artifact §l§6IV§r");
             $player->getInventory()->removeItem($relic);
             break;
         }
