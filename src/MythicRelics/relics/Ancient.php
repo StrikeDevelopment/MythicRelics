@@ -52,7 +52,7 @@ class Ancient implements Listener
                                       TF::GRAY . "§dActivation: §6Right-Click§r" . PHP_EOL .
                                       TF::GRAY . "§4--------------------§r");
                 $player->getInventory()->addItem($relic);
-                $player->getServer()->broadcastMessage(TF::BOLD . TF::DARK_GRAY . "§7(" . TF::DARK_PURPLE . "§c§l!§r" . TF::DARK_GRAY . "§7)§r" . TF::RESET . TF::GRAY . TF::RESET . TF::GRAY . "§a $name §7found a §bAncient Artifact!§r"");
+                $player->getServer()->broadcastMessage(TF::BOLD . TF::DARK_GRAY . "§7(" . TF::DARK_PURPLE . "§c§l!§r" . TF::DARK_GRAY . "§7)§r" . TF::RESET . TF::GRAY . TF::RESET . TF::GRAY . "§a $name §7found a §bAncient Artifact §6§lI§r");
             }
         }
     }
@@ -120,7 +120,7 @@ class Ancient implements Listener
             $rand1 = mt_rand(0, 1);
 
             $player->getInventory()->addItem($tobegiven1[$rand1]);
-            $player->sendMessage(TF::LIGHT_PURPLE . "§7(§c§l!§r§7) §6Opening §bAncient Artifact§3...");
+            $player->sendMessage(TF::LIGHT_PURPLE . "§7Opening §bAncient Artifact §l§6I§r");
             $player->getInventory()->removeItem($relic);
             break;
         }
