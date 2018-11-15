@@ -48,7 +48,7 @@ class Ancient implements Listener
                                       TF::GRAY . "§7contains §l§bMythical" . PHP_EOL .
                                       TF::GRAY . "§l§bRewards§r" . PHP_EOL .
                                       TF::GRAY . "§4--------------------§r" . PHP_EOL .
-                                      TF::GRAY . "§dTier Level: §6II" . PHP_EOL .
+                                      TF::GRAY . "§dTier Level: §6I" . PHP_EOL .
                                       TF::GRAY . "§dActivation: §6Right-Click§r" . PHP_EOL .
                                       TF::GRAY . "§4--------------------§r");
                 $player->getInventory()->addItem($relic);
