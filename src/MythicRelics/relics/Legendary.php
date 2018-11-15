@@ -50,7 +50,7 @@ class Legendary implements Listener
                                       TF::GRAY . "§4--------------------§r" . PHP_EOL .
                                       TF::GRAY . "§dTier Level: §6II" . PHP_EOL .
                                       TF::GRAY . "§dActivation: §6Right-Click" . PHP_EOL .
-                                      TF::GRAY . "§4--------------------§r" . PHP_EOL .
+                                      TF::GRAY . "§4--------------------§r");
                 $player->getInventory()->addItem($relic);
                 $player->getServer()->broadcastMessage(TF::BOLD . TF::DARK_GRAY . "§7(" . TF::DARK_PURPLE . "§l§c!§r" . TF::DARK_GRAY . "§7)" . TF::RESET . TF::GRAY . TF::RESET . TF::GRAY . "§a $name §7found a §bAncient Artifact §l§6II§r");
             }
