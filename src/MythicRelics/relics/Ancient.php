@@ -41,7 +41,7 @@ class Ancient implements Listener
         if($block->getId() === 1){
             if($chance === 1){
 
-                $relic = Item::get(54, 101, 1);
+                $relic = Item::get(54, 1, 1);
                 $relic->setCustomName(TF::RESET . TF::AQUA . "§6[§bAncient Artifact§6]§r" . PHP_EOL .
                                       TF::GRAY . "§4--------------------§r" . PHP_EOL .
                                       TF::GRAY . "§7This Ancient Pouch" . PHP_EOL .
@@ -73,8 +73,8 @@ class Ancient implements Listener
         $resp = Enchantment::getEnchantment(6);
 
         switch($damage) {
-            case "101":
-            $relic = Item::get(54, 101, 1);
+            case "1":
+            $relic = Item::get(54, 1, 1);
             $item1 = Item::get(310, 0, 1);
             $item1->setCustomName(TF::AQUA . "§4Butchers" . TF::GRAY . "§6Helmet");
             $item1->addEnchantment(new EnchantmentInstance($prot, 1));
